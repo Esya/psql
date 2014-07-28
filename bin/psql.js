@@ -35,12 +35,16 @@ if (targetServers.length === 0) {
   process.exit(1);
 }
 
-logger.info("Matching servers count :",targetServers.length);
+console.log("Running query against "+targetServers.length+" servers\n");
 logger.debug(targetServers);
 
 Query = new queryRunner(targetServers,query);
 Query.runAll().then(function(jobs) {
-  table.render(jobs);
+  try{
+    table.render(jobs);
+  } catch(e) {
+    logger.error("Failed rendering",e,e.stack);
+  }
 },function(err) {
   logger.error('Failed',err,err);
 });

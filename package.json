@@ -15,6 +15,7 @@
     "winston": "^0.7.3",
     "mysql": "^2.4.1",
     "underscore": "^1.6.0",
-    "cli-table": "^0.3.0"
+    "cli-table": "^0.3.0",
+    "MD5": "^1.2.1"
   }
 }
