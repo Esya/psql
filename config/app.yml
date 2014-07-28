@@ -1,0 +1,30 @@
+default:
+  servers:
+    - host: "1.1.1.1"
+      user: pp_tristanf
+      pass: "mYpAssW0rD"
+      groups:
+        - prod
+        - backoffice
+    - host: "2.2.2.2"
+      user: michelangelo
+      pass: "nope"
+      groups:
+        - prod
+        - front
+    - host: "127.0.0.1"
+      port: 8889
+      user: root
+      password: root
+      groups:
+        - local
+    - host: "localhost"
+      user: root
+      password: ''
+      groups:
+        - local
+  query:
+    # Timeout per query, in miliseconds.
+    timeout: false
+  render:
+    onetable: true
