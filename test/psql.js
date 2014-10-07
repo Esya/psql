@@ -1,6 +1,6 @@
 require('should');
 var config = require('./../lib/config.js');
-var query = require('./../lib/query.js');
+var query = require('..').query;
 
 var x = new query({},{});
 

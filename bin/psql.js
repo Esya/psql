@@ -35,7 +35,7 @@ if (targetServers.length === 0) {
   process.exit(1);
 }
 
-console.log("Running query against "+targetServers.length+" servers\n");
+logger.info("Running query against "+targetServers.length+" servers\n");
 logger.debug(targetServers);
 
 Query = new queryRunner(targetServers,query);

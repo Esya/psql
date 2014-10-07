@@ -27,12 +27,22 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.js']
       }
-    }
+    },
+    mocha_istanbul: {
+          coverage: {
+              src: 'test', // a folder works nicely
+              options: {
+                coverage: true,
+                reportFormats: ['html']
+              }
+          },
+      }
   });
 
   grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-coveralls');
+  grunt.loadNpmTasks('grunt-mocha-istanbul');
 
+  grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
   grunt.registerTask('test', ['mochaTest']);
 
 };
