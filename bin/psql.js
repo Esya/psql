@@ -4,7 +4,7 @@ var config = require('./../lib/config.js');
 var logger = require('./../lib/logger.js');
 var table  = require('./../lib/table.js');
 
-var argv   = require('yargs')
+var argv   = require('yargs-test')
     .usage('Usage: $0 [query]')
     .example('$0 -g prod -g dev "SELECT User FROM mysql.user"', "Lists all users from groups prod and dev.")
     .example('$0 "SELECT VERSION()"', "Get MySQL version from all servers")
